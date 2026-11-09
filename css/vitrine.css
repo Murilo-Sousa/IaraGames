@@ -1,0 +1,145 @@
+.vitrine .title-row h2 i {
+  margin-right: 12px;
+  font-size: 1.7rem;
+}
+
+.vitrine .previa {
+  width: 100%;
+}
+
+
+.vitrine-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+}
+
+.vitrine-capa {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.vitrine-capa .previa-midia {
+  border-radius: 10px;
+}
+
+
+.vitrine-detalhes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.vitrine-nome {
+  color: var(--branco);
+  font-family: "Gabarito", sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.vitrine-preco {
+  display: block;
+  margin-top: 10px;
+  color: rgba(254, 254, 254, 0.8);
+  font-family: "Gabarito", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.vitrine-texto {
+  max-width: 42ch;
+  margin-top: 22px;
+  color: rgba(254, 254, 254, 0.72);
+  font-family: "Gabarito", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+
+.vitrine-botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: var(--laranja);
+  color: var(--branco);
+  font-family: "Gabarito", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.vitrine-botao:hover {
+  background: var(--branco);
+  color: var(--laranja);
+}
+
+.vitrine-botao i {
+  font-size: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+.vitrine-botao:focus-visible {
+  outline: 3px solid var(--branco);
+  outline-offset: 3px;
+}
+
+
+@media (max-width: 860px) {
+  .vitrine-item {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .vitrine-botao {
+    align-self: stretch;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .vitrine .title-row h2 i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vitrine-botao,
+  .vitrine-botao i {
+    transition: none;
+  }
+}
+
+
+.vitrine-item::before,
+.vitrine-item::after,
+.vitrine-capa::before,
+.vitrine-capa::after,
+.vitrine-botao::before,
+.vitrine-botao::after {
+  display: none !important;
+  content: none !important;
+}
+
+.vitrine-item,
+.vitrine-capa {
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.vitrine-botao {
+  text-decoration: none;
+  background-image: none;
+}
+
+.vitrine-botao:hover {
+  text-decoration: none;
+}
+

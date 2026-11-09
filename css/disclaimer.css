@@ -1,0 +1,332 @@
+
+.disclaimer {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    align-items: center;
+    gap: 72px;
+    width: 100%;
+    padding: 110px max(5%, calc((100vw - 1320px) / 2));
+}
+
+.disclaimer > * {
+    width: auto;
+    max-width: none;
+}
+
+
+.disclaimer-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.disclaimer-selo {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 22px;
+    font-family: "Gabarito", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--laranja);
+}
+
+.disclaimer-selo::before {
+    content: "";
+    width: 38px;
+    height: 2px;
+    background: var(--laranja);
+}
+
+.disclaimer-conteudo h2 {
+    font-family: "Gabarito", sans-serif;
+    font-weight: 800;
+    font-size: clamp(2.5rem, 4.4vw, 4rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: #FFF8ED;
+    margin-bottom: 28px;
+}
+
+.disclaimer-conteudo h2 em {
+    font-style: normal;
+    color: var(--laranja);
+    background: linear-gradient(var(--laranja), var(--laranja)) no-repeat 0 100% / 100% 0.1em;
+    padding-bottom: 0.06em;
+}
+
+.disclaimer-lead {
+    max-width: 46ch;
+    margin-bottom: 16px;
+    font-family: "Gabarito", sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.55;
+    color: #E8EBEF;
+}
+
+.disclaimer-lead strong {
+    color: var(--branco);
+    font-weight: 700;
+}
+
+.disclaimer-texto {
+    max-width: 46ch;
+    font-family: "Gabarito", sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(254, 254, 254, 0.68);
+}
+
+.disclaimer-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-top: 38px;
+}
+
+.disclaimer-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-family: "Gabarito", sans-serif;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.disclaimer-btn.primario {
+    background: var(--laranja);
+    color: var(--branco);
+}
+
+.disclaimer-btn.primario i {
+    font-size: 13px;
+    transition: transform 0.3s ease;
+}
+
+.disclaimer-btn.primario:hover i {
+    transform: translateX(4px);
+}
+
+.disclaimer-btn.secundario {
+    border: 1px solid rgba(254, 254, 254, 0.5);
+    color: var(--branco);
+}
+
+.disclaimer-btn.secundario:hover {
+    background: var(--branco);
+    color: var(--azul-marinho);
+}
+
+
+.jogos-disclaimer {
+    display: flex;
+    gap: 12px;
+    height: clamp(420px, 64vh, 580px);
+}
+
+.jogo {
+    position: relative;
+    display: block;
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 22px;
+    background: var(--azul-escuro);
+    text-decoration: none;
+    color: var(--branco);
+    isolation: isolate;
+    outline-offset: 3px;
+    transition: flex-grow 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.jogo.is-active {
+    flex-grow: 6;
+}
+
+.jogo img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    transform: translateX(-50%);
+    z-index: -2;
+}
+
+.jogo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(10, 34, 57, 0.45);
+    transition: opacity 0.5s ease;
+}
+
+.jogo.is-active::before {
+    opacity: 0;
+}
+
+.jogo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(to top, rgba(6, 27, 31, 0.92) 0%, rgba(6, 27, 31, 0) 55%);
+}
+
+.jogo-num {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    font-family: "Anton SC", sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+    transition: color 0.4s ease;
+}
+
+.jogo.is-active .jogo-num {
+    color: var(--laranja);
+}
+
+.jogo-nome-v {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    writing-mode: vertical-rl;
+    transform: translateX(-50%) rotate(180deg);
+    white-space: nowrap;
+    font-family: "Gabarito", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+    transition: opacity 0.3s ease;
+}
+
+.jogo.is-active .jogo-nome-v {
+    opacity: 0;
+}
+
+.jogo-info {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(14px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.jogo.is-active .jogo-info {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.45s ease 0.25s, transform 0.45s ease 0.25s;
+}
+
+.jogo-genero {
+    padding: 4px 12px;
+    border-radius: 100px;
+    background: rgba(135, 135, 135, 0.45);
+    backdrop-filter: blur(6px);
+    font-family: "Gabarito", sans-serif;
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.jogo-nome {
+    font-family: "Gabarito", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.jogo-ver {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Gabarito", sans-serif;
+    font-size: 0.9rem;
+    color: var(--laranja);
+}
+
+.jogo-ver i {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.jogo:hover .jogo-ver i {
+    transform: translateX(4px);
+}
+
+.jogo:focus-visible {
+    outline: 2px solid var(--laranja);
+}
+
+
+@media (max-width: 960px) {
+    .disclaimer {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 48px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .jogos-disclaimer {
+        height: 440px;
+    }
+}
+
+@media (max-width: 560px) {
+    .jogos-disclaimer {
+        height: 380px;
+        gap: 8px;
+    }
+
+    .jogo {
+        border-radius: 18px;
+    }
+
+    .jogo.is-active {
+        flex-grow: 6;
+    }
+
+    .jogo:not(.is-active) .jogo-num {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .jogo-info {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .jogo-genero {
+        max-width: 100%;
+        white-space: normal;
+    }
+
+    .jogo-nome {
+        font-size: 1.2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .jogo,
+    .jogo-info,
+    .jogo.is-active .jogo-info {
+        transition: none;
+    }
+}

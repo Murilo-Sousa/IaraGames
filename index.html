@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IARA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Special+Gothic:wght@400..700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton+SC&family=Anton&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/imgs/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="/imgs/favicon/favicon.svg">
+  <link rel="shortcut icon" href="/imgs/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/imgs/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/imgs/favicon/site.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/global.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="/index.html" class="nav-logo" aria-label="IARA, página inicial">
+        <img src="/imgs/logo/logo_original.png" alt="IARA">
+      </a>
+
+      <button type="button" class="nav-burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="nav-menu">
+        <div class="nav-links">
+          <span class="nav-indicator" aria-hidden="true"></span>
+          <a href="#produtos" class="nav-link" data-section="produtos">Loja</a>
+          <a href="#alem" class="nav-link" data-section="alem">Comunidade</a>
+          <a href="#sobre" class="nav-link" data-section="sobre">Sobre</a>
+          <a href="#footer" class="nav-link" data-section="footer">Suporte</a>
+        </div>
+
+        <div class="nav-search" role="search">
+          <i class="fa-solid fa-magnifying-glass nav-search-icon"></i>
+          <input type="text" id="nav-search-input" placeholder="Procurar jogos" autocomplete="off" spellcheck="false"
+                 role="combobox" aria-label="Procurar jogos" aria-expanded="false" aria-controls="nav-search-results" aria-autocomplete="list">
+          <div class="nav-panel nav-results" id="nav-search-results" role="listbox" aria-label="Resultados da busca"></div>
+        </div>
+
+        <div class="nav-cats">
+          <button type="button" class="nav-cats-btn" aria-expanded="false" aria-controls="nav-cats-panel">
+            Categorias
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="nav-panel nav-cats-panel" id="nav-cats-panel">
+            <a href="/catalogo.html?categoria=acao" class="nav-cat">
+              <i class="fa-solid fa-bolt"></i>
+              <span><strong>Ação</strong><small>Adrenalina e reflexo</small></span>
+            </a>
+            <a href="/catalogo.html?categoria=aventura" class="nav-cat">
+              <i class="fa-solid fa-compass"></i>
+              <span><strong>Aventura</strong><small>Mundos para explorar</small></span>
+            </a>
+            <a href="/catalogo.html?categoria=rpg" class="nav-cat">
+              <i class="fa-solid fa-hat-wizard"></i>
+              <span><strong>RPG</strong><small>Histórias e escolhas</small></span>
+            </a>
+            <a href="/catalogo.html?categoria=estrategia" class="nav-cat">
+              <i class="fa-solid fa-chess-knight"></i>
+              <span><strong>Estratégia</strong><small>Planejamento e tática</small></span>
+            </a>
+            <a href="/catalogo.html" class="nav-cats-all">
+              Ver todos os jogos
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <a href="/formulario/login.html" class="nav-btn nav-btn-ghost btn-login" data-auth-open="login">Entrar</a>
+          <a href="/formulario/criar conta.html" class="nav-btn nav-btn-solid btn-criar-conta" data-auth-open="cadastro">Criar conta</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <script src="/javascript/catalogo/dados.js"></script>
+  <script src="/javascript/header.js"></script>
+  <section class="destaque" id="explorar" role="group" aria-roledescription="carrossel" aria-label="Jogos em destaque">
+    <div class="slider">
+      <h2 class="slider-titulo">Em destaque e recomendados</h2>
+
+      <button type="button" class="slider-seta slider-prev" aria-label="Jogo anterior">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+
+      <div class="slider-viewport">
+        <div class="slider-track">
+          <a href="/games/compra.html?id=chroma-squad" class="slide" style="--tint:#18172b" aria-label="Ver jogo Chroma Squad">
+            <div class="slide-img">
+              <img src="/imgs/carrossel/chroma.jpg" alt="Capa de Chroma Squad" draggable="false">
+            </div>
+            <div class="slide-info">
+              <ul class="slide-generos"><li>Tactical RPG</li><li>Estratégia</li></ul>
+              <h3>Chroma Squad</h3>
+              <p class="slide-desc">Dublês de cinema largam o estúdio para criar a própria série de heróis. Monte a equipe, cuide do orçamento e vença em combates táticos.</p>
+            </div>
+          </a>
+          <a href="/games/compra.html?id=dandara" class="slide" style="--tint:#1a2429" aria-label="Ver jogo Dandara">
+            <div class="slide-img">
+              <img src="/imgs/carrossel/dandara.jpg" alt="Capa de Dandara" draggable="false">
+            </div>
+            <div class="slide-info">
+              <ul class="slide-generos"><li>Metroidvania</li><li>Plataforma</li></ul>
+              <h3>Dandara</h3>
+              <p class="slide-desc">Salte entre superfícies de sal e liberte um mundo dominado pelo medo, ao lado de uma heroína que não aceita ficar parada.</p>
+            </div>
+          </a>
+          <a href="/games/compra.html?id=momodora" class="slide" style="--tint:#201c26" aria-label="Ver jogo Momodora: Reverie Under the Moonlight">
+            <div class="slide-img">
+              <img src="/imgs/carrossel/momodora.jpg" alt="Capa de Momodora: Reverie Under the Moonlight" draggable="false">
+            </div>
+            <div class="slide-info">
+              <ul class="slide-generos"><li>Metroidvania</li><li>Ação</li></ul>
+              <h3>Momodora: Reverie Under the Moonlight</h3>
+              <p class="slide-desc">Kaho, sacerdotisa de Lun, parte para enfrentar a maldição que consome o reino de Karst.</p>
+            </div>
+          </a>
+          <a href="/games/compra.html?id=mullet" class="slide" style="--tint:#321411" aria-label="Ver jogo Mullet MadJack">
+            <div class="slide-img">
+              <img src="/imgs/carrossel/mullet.jpg" alt="Capa de Mullet MadJack" draggable="false">
+            </div>
+            <div class="slide-info">
+              <ul class="slide-generos"><li>FPS</li><li>Ação</li></ul>
+              <h3>Mullet MadJack</h3>
+              <p class="slide-desc">Um FPS frenético dos anos 80 em que o tempo é a sua vida: cada abate rende mais alguns segundos.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <button type="button" class="slider-seta slider-next" aria-label="Próximo jogo">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <div class="slider-dots" role="tablist" aria-label="Escolher jogo"></div>
+    </div>
+    <script src="/javascript/carrossel.js"></script>
+  </section>
+  <section class="highlights" id="highlights">
+    <div class="highlights-wrapper">
+      <div class="card-large">
+        <a href="/games/compra.html?id=no-place-for-bravery">
+          <img src="/imgs/destaques/bravery.jpg" alt="">
+          <div class="card-title">Evento de No Place For Bravery</div>
+        </a>
+      </div>
+      <div class="card-side">
+        <div class="card-small">
+          <a href="/games/compra.html?id=9-kings">
+            <div class="badge-group">
+              <div class="badge">Oferta da semana</div>
+              <div class="discount">30% off</div>
+            </div>
+            <img src="/imgs/destaques/9kings.jpg" alt="">
+          </a>
+        </div>
+        <div class="card-small">
+          <a href="/games/compra.html?id=enigma-do-medo">
+            <img src="/imgs/destaques/enigma.jpg" alt="">
+            <div class="card-title small">Apenas hoje!</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="disclaimer" id="sobre">
+    <div class="disclaimer-conteudo">
+      <span class="disclaimer-selo">Sobre a IARA</span>
+      <h2>Todo jogo aqui tem <em>sotaque brasileiro.</em></h2>
+      <p class="disclaimer-lead">A IARA é a loja de quem quer jogar o que o Brasil está criando: <strong>aventuras, roguelikes, ação e mundos autorais</strong> feitos por estúdios do país.</p>
+      <p class="disclaimer-texto">Cada título ganha o seu espaço, a sua história e o crédito de quem o desenvolveu. Escolha uma capa e comece por ela.</p>
+      <div class="disclaimer-acoes">
+        <a href="#produtos" class="disclaimer-btn primario">
+          Explorar o catálogo
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#highlights" class="disclaimer-btn secundario">Ver destaques</a>
+      </div>
+    </div>
+    <div class="jogos-disclaimer">
+      <a href="/games/compra.html?id=eternal-cylinder" class="jogo">
+        <img src="/imgs/disclaimer/UX/eternal.jpg" alt="">
+        <span class="jogo-num">01</span>
+        <span class="jogo-nome-v">The Eternal Cylinder</span>
+        <div class="jogo-info">
+          <span class="jogo-genero">Sobrevivência</span>
+          <strong class="jogo-nome">The Eternal Cylinder</strong>
+          <span class="jogo-ver">Ver jogo <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="/games/compra.html?id=kukoos" class="jogo">
+        <img src="/imgs/disclaimer/UX/kukoos.jpg" alt="">
+        <span class="jogo-num">02</span>
+        <span class="jogo-nome-v">Kukoos: Lost Pets</span>
+        <div class="jogo-info">
+          <span class="jogo-genero">Aventura</span>
+          <strong class="jogo-nome">Kukoos: Lost Pets</strong>
+          <span class="jogo-ver">Ver jogo <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="/games/compra.html?id=mullet" class="jogo is-active">
+        <img src="/imgs/disclaimer/UX/mullet.jpeg" alt="">
+        <span class="jogo-num">03</span>
+        <span class="jogo-nome-v">Mullet MadJack</span>
+        <div class="jogo-info">
+          <span class="jogo-genero">Ação em primeira pessoa</span>
+          <strong class="jogo-nome">Mullet MadJack</strong>
+          <span class="jogo-ver">Ver jogo <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="/games/compra.html?id=dandy-ace" class="jogo">
+        <img src="/imgs/disclaimer/UX/dandy.jpg" alt="">
+        <span class="jogo-num">04</span>
+        <span class="jogo-nome-v">Dandy Ace</span>
+        <div class="jogo-info">
+          <span class="jogo-genero">Roguelike</span>
+          <strong class="jogo-nome">Dandy Ace</strong>
+          <span class="jogo-ver">Ver jogo <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+      <a href="/games/compra.html?id=relic-hunters" class="jogo">
+        <img src="/imgs/disclaimer/UX/relic.jpg" alt="">
+        <span class="jogo-num">05</span>
+        <span class="jogo-nome-v">Relic Hunters Legend</span>
+        <div class="jogo-info">
+          <span class="jogo-genero">Ação cooperativa</span>
+          <strong class="jogo-nome">Relic Hunters Legend</strong>
+          <span class="jogo-ver">Ver jogo <i class="fa-solid fa-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+    <script src="/javascript/sobre.js"></script>
+  </section>
+  <section class="products-section" id="produtos" data-catalogo="produtos">
+  </section>
+  <section class="ofertas-section" id="ofertas" data-catalogo="ofertas">
+  </section>
+  <section class="products-section" data-catalogo="gratuitos">
+  </section>
+  <section class="alem-do-jogo" id="alem">
+    <div class="alem-do-jogo-section">
+      <div class="alem-do-jogo-content">
+        <img src="/imgs/destaques/9kings.jpg" alt="alem-do-jogo-img">
+      </div>
+      <div class="alem-do-jogo-texto">
+        <h1>Além do Jogo</h1>
+        <p>Cada jogo carrega uma história que vai além da tela. Veja como ideias ganham vida através de processos criativos, testes e desafios reais enfrentados durante o desenvolvimento.</p>
+        <p>Na IARA, você encontra essas experiências já prontas para serem exploradas com toda a qualidade e originalidade que tornam cada título único.</p>
+        <a class="btn-cadastro" href="/formulario/criar conta.html" data-auth-open="cadastro">Faça seu cadastro</a>
+      </div>
+    </div>
+  </section>
+  <section class="display-jogos">
+    <div class="products-block">
+      <div class="title-row">
+        <div class="title-text">
+          <h2>Coleções</h2>
+          <p>Explore lista de jogos selecionados especialmente para você</p>
+        </div>
+        <a href="/catalogo.html" class="btn-ver-mais">
+          Ver mais
+          <i class="fa-solid fa-chevron-right"></i>
+        </a>
+      </div>
+      <div class="colecoes-grid">
+        <div class="colecoes-card">
+          <img src="/imgs/produtos/colecoes/UX/Rectangle 354.png" alt="Explore mundos enormes">
+          <div class="colecoes-card-info">
+            <h3>Explore mundos enormes</h3>
+            <p>Descubra universos vastos e aventure-se em jornadas inesquecíveis</p>
+            <a href="/catalogo.html" class="btn-colecao">Veja a lista</a>
+          </div>
+        </div>
+        <div class="colecoes-card">
+          <img src="/imgs/produtos/colecoes/UX/Rectangle 355.png" alt="Para Jogar Offline">
+          <div class="colecoes-card-info">
+            <h3>Para Jogar Offline</h3>
+            <p>Aproveite grandes experiências sem precisar de conexão com a internet</p>
+            <a href="/catalogo.html" class="btn-colecao">Veja a lista</a>
+          </div>
+        </div>
+        <div class="colecoes-card">
+          <img src="/imgs/produtos/colecoes/UX/Rectangle 356.png" alt="Experiências relaxantes">
+          <div class="colecoes-card-info">
+            <h3>Experiências relaxantes</h3>
+            <p>Desacelere e aproveite experiências tranquilas no seu próprio ritmo</p>
+            <a href="/catalogo.html" class="btn-colecao">Veja a lista</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container" id="footer">
+      <div class="footer-brand">
+        <div class="footer-brand-top">
+          <img src="/imgs/logo/logo_original.png" alt="IARA Logo">
+          <h3>IARA</h3>
+        </div>
+        <p class="footer-brand-description">
+          Sua plataforma de jogos independentes brasileiros.
+          <br>
+          Descubra, jogue e apoie desenvolvedores locais.
+        </p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Sobre Iara Games</h4>
+          <ul>
+            <li><a href="#sobre">Quem Somos</a></li>
+            <li><a href="#sobre">Nossa Equipe</a></li>
+            <li><a href="#">Parceiros</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Suporte</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Tickets</a></li>
+          </ul>
+        </div>
+        <div class="footer-column coluna-seguranca">
+          <h4 class="no-wrap">Segurança e Privacidade</h4>
+          <ul>
+            <li><a href="#">Termos de uso</a></li>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4>Recursos</h4>
+          <ul>
+            <li><a href="#">Termos de Serviço</a></li>
+            <li><a href="#">Classificação Etária</a></li>
+            <li><a href="#">Licenças</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-twitch"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="auth-modal" id="auth-modal" aria-hidden="true">
+    <div class="auth-backdrop" data-auth-close></div>
+
+    <div class="auth-dialog" role="dialog" aria-modal="true" aria-labelledby="auth-title-login">
+      <button type="button" class="auth-close" aria-label="Fechar" data-auth-close>
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="auth-view" data-auth-view="login">
+        <h2 class="auth-sr" id="auth-title-login">Entrar na IARA</h2>
+        <div class="auth-logo">
+          <img src="/imgs/logo/logo_original.png" alt="">
+          <span>IARA</span>
+        </div>
+
+        <p class="auth-subtitle">Entre agora e continue sua jornada no universo dos jogos.</p>
+
+        <form class="auth-form" action="/formulario/preferencias.html" method="get" id="auth-login-form">
+          <div class="auth-field">
+            <input type="text" id="login-nickname" name="nickname" placeholder="Nickname" autocomplete="username" required>
+            <i class="fa-regular fa-user auth-icon"></i>
+          </div>
+
+          <div class="auth-field">
+            <input type="password" id="login-senha" name="senha" placeholder="Senha" autocomplete="current-password" required minlength="6">
+            <i class="fa-regular fa-eye-slash auth-icon toggle-password" role="button" tabindex="0" aria-label="Mostrar senha" data-target="login-senha" title="Mostrar senha"></i>
+          </div>
+
+          <a href="#" class="auth-forgot">Esqueceu a senha?</a>
+
+          <button type="submit" class="auth-submit">Entrar</button>
+        </form>
+
+        <p class="auth-footer">
+          <span>Não possui uma conta?</span>
+          <a href="/formulario/criar conta.html" data-auth-switch="cadastro">Cadastrar</a>
+        </p>
+      </div>
+
+      <div class="auth-view" data-auth-view="cadastro" hidden>
+        <h2 class="auth-sr" id="auth-title-cadastro">Criar conta na IARA</h2>
+        <div class="auth-logo">
+          <img src="/imgs/logo/logo_original.png" alt="">
+          <span>IARA</span>
+        </div>
+
+        <p class="auth-subtitle">Cadastre-se agora e desbloqueie um universo de jogos</p>
+
+        <form class="auth-form" action="/formulario/preferencias.html" method="get" id="auth-cadastro-form">
+          <div class="auth-field">
+            <input type="text" id="cad-nickname" name="nickname" placeholder="Nickname" autocomplete="username" required>
+            <i class="fa-regular fa-user auth-icon"></i>
+          </div>
+
+          <div class="auth-field">
+            <input type="email" id="cad-email" name="email" placeholder="E-mail" autocomplete="email" required>
+            <i class="fa-regular fa-envelope auth-icon"></i>
+          </div>
+
+          <div class="auth-field">
+            <input type="password" id="cad-senha" name="senha" placeholder="Senha" autocomplete="new-password" minlength="6" required>
+            <i class="fa-regular fa-eye-slash auth-icon toggle-password" role="button" tabindex="0" aria-label="Mostrar senha" data-target="cad-senha" title="Mostrar senha"></i>
+          </div>
+
+          <div class="auth-field">
+            <input type="password" id="cad-confirmar" name="confirmar-senha" placeholder="Confirmar senha" autocomplete="new-password" minlength="6" required>
+            <i class="fa-regular fa-eye-slash auth-icon toggle-password" role="button" tabindex="0" aria-label="Mostrar senha" data-target="cad-confirmar" title="Mostrar senha"></i>
+          </div>
+
+          <button type="submit" class="auth-submit">Próximo passo</button>
+        </form>
+
+        <p class="auth-footer">
+          <span>Já possui uma conta?</span>
+          <a href="/formulario/login.html" data-auth-switch="login">Entrar</a>
+        </p>
+      </div>
+
+      <div class="auth-view auth-view-pref" data-auth-view="preferencias" hidden>
+        <button type="button" class="auth-back" data-auth-back>
+          <i class="fa-solid fa-arrow-left"></i>
+          Voltar
+        </button>
+
+        <form class="auth-pref" id="auth-pref-form" action="/index.html" method="get">
+          <div class="auth-pref-left">
+            <div class="auth-pref-greeting">
+              <h2 id="auth-title-preferencias" tabindex="-1">Olá <span id="auth-pref-nome"></span></h2>
+              <p>Conte um pouco sobre você para personalizarmos sua experiência.</p>
+            </div>
+
+            <fieldset class="auth-pref-block">
+              <legend>Escolha seu estilo favorito</legend>
+              <div class="auth-tags">
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="acao">
+                <span>Ação</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="aventura">
+                <span>Aventura</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="esportes">
+                <span>Esportes</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="mundo-aberto">
+                <span>Mundo Aberto</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="fps">
+                <span>FPS</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="estrategia">
+                <span>Estratégia</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="terror">
+                <span>Terror</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="simulacao">
+                <span>Simulação</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="luta">
+                <span>Luta</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="metroidvania">
+                <span>Metroidvania</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="jrpg">
+                <span>JRPG</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="rpg">
+                <span>RPG</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="arcade">
+                <span>Arcade</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="roguelike">
+                <span>Roguelike</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="sobrevivencia">
+                <span>Sobrevivência</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="cartas">
+                <span>Cartas</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="tabuleiro">
+                <span>Tabuleiro</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="misterio">
+                <span>Mistério</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="plataforma">
+                <span>Plataforma</span>
+              </label>
+              <label class="auth-tag">
+                <input type="checkbox" name="estilo" value="hack-slash">
+                <span>Hack n' slash</span>
+              </label>
+              </div>
+            </fieldset>
+
+            <fieldset class="auth-pref-block">
+              <legend>Como você gosta de jogar?</legend>
+              <div class="auth-tags">
+              <label class="auth-tag">
+                <input type="radio" name="modo" value="competitivo">
+                <span>Competitivo</span>
+              </label>
+              <label class="auth-tag">
+                <input type="radio" name="modo" value="casual">
+                <span>Casual</span>
+              </label>
+              <label class="auth-tag">
+                <input type="radio" name="modo" value="multiplayer">
+                <span>Multiplayer</span>
+              </label>
+              <label class="auth-tag">
+                <input type="radio" name="modo" value="singleplayer">
+                <span>Singleplayer</span>
+              </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="auth-pref-submit">Entrar</button>
+          </div>
+
+          <div class="auth-pref-right">
+            <div class="auth-avatar-header">
+              <h3>Escolha sua foto de perfil</h3>
+              <p>Personalize sua conta do seu jeito</p>
+            </div>
+
+            <fieldset class="auth-avatar-box">
+              <legend>Escolha seu avatar</legend>
+              <div class="auth-avatar-grid">
+              <label class="auth-avatar">
+                <input type="radio" name="avatar" value="1">
+                <img src="/imgs/preferencias/monica.jpg" alt="Avatar 1">
+              </label>
+              <label class="auth-avatar">
+                <input type="radio" name="avatar" value="2">
+                <img src="/imgs/preferencias/bidu.jpg" alt="Avatar 2">
+              </label>
+              <label class="auth-avatar">
+                <input type="radio" name="avatar" value="3">
+                <img src="/imgs/preferencias/cascao.jpg" alt="Avatar 3">
+              </label>
+              <label class="auth-avatar">
+                <input type="radio" name="avatar" value="4">
+                <img src="/imgs/preferencias/chico.jpg" alt="Avatar 4">
+              </label>
+              <label class="auth-avatar">
+                <input type="radio" name="avatar" value="5">
+                <img src="/imgs/preferencias/franjinha.jpg" alt="Avatar 5">
+              </label>
+              <label class="auth-avatar">
+                <input type="radio" name="avatar" value="6">
+                <img src="/imgs/preferencias/cebolinha.jpg" alt="Avatar 6">
+              </label>
+              <label class="auth-avatar">
+                <input type="radio" name="avatar" value="7">
+                <img src="/imgs/preferencias/magali.jpg" alt="Avatar 7">
+              </label>
+              <label class="auth-avatar">
+                <input type="radio" name="avatar" value="8">
+                <img src="/imgs/preferencias/monicao.jpg" alt="Avatar 8">
+              </label>
+              <label class="auth-avatar">
+                <input type="radio" name="avatar" value="9">
+                <img src="/imgs/preferencias/xaveco.jpg" alt="Avatar 9">
+              </label>
+              </div>
+            </fieldset>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="/javascript/catalogo/componentes.js"></script>
+  <script src="/javascript/catalogo/montar.js"></script>
+  <script src="/javascript/previa.js"></script>
+  <script src="/javascript/auth-modal.js"></script>
+</body>
+</html>

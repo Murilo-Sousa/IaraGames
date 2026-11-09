@@ -1,0 +1,36 @@
+
+.catalogo-pagina {
+  padding-top: calc(var(--header-h) + 40px);
+  margin-bottom: 100px;
+  gap: 24px;
+}
+
+.catalogo-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 80%;
+  max-width: 1400px;
+}
+
+.catalogo-filtro {
+  padding: 8px 16px;
+  border: 1px solid var(--laranja);
+  border-radius: 300px;
+  color: var(--branco);
+  font-family: "Gabarito", sans-serif;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background-color 0.25s ease;
+}
+
+.catalogo-filtro:hover,
+.catalogo-filtro.is-active {
+  background-color: var(--laranja);
+}
+
+@media (max-width: 768px) {
+  .catalogo-filtros {
+    width: 95%;
+  }
+}

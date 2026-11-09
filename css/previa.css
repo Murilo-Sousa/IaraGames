@@ -1,0 +1,68 @@
+
+.previa-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.previa-link:focus-visible {
+  outline: 3px solid var(--laranja);
+  outline-offset: 4px;
+}
+
+.previa-midia {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--azul-escuro);
+}
+
+.previa-img,
+.previa-gif {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.previa-gif {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.previa.is-playing.is-ready .previa-gif {
+  opacity: 1;
+}
+
+.previa.is-loading .previa-midia::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  width: 40%;
+  height: 3px;
+  background: var(--laranja);
+  animation: previa-carregando 1.1s ease-in-out infinite;
+}
+
+@keyframes previa-carregando {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(250%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .previa-gif {
+    transition: none;
+  }
+
+  .previa.is-loading .previa-midia::after {
+    animation: none;
+    width: 100%;
+  }
+}
