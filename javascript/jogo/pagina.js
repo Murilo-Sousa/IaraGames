@@ -494,6 +494,17 @@
       document.title = jogo.name + " | IARA";
     }, [jogo.name]);
 
+    // Ao voltar da tela de pagamento sem concluir, avisa e limpa o parametro da URL
+    useEffect(function () {
+      var parametros = new URLSearchParams(global.location.search);
+      if (parametros.get("pagamento") !== "cancelado") return;
+
+      notificacao[1]("Pagamento cancelado. Você pode tentar de novo quando quiser.");
+      parametros.delete("pagamento");
+      var busca = parametros.toString();
+      global.history.replaceState(null, "", global.location.pathname + (busca ? "?" + busca : ""));
+    }, []);
+
     useEffect(function () {
       var video = videoPrincipal.current;
       if (!video) return;
