@@ -6,7 +6,7 @@ Plataforma brasileira de distribuição de jogos digitais, com foco em **jogos d
 
 ## 🌐 Projeto publicado
 
-> ⚠️ Inserir aqui o link do projeto na Render.
+https://iaragames.onrender.com/
 
 Para testar a compra, use o cartão de teste da Stripe: `4242 4242 4242 4242`, com qualquer data futura, qualquer CVC e qualquer nome. **Nenhum valor real é cobrado.** Quem acessa o site não precisa criar conta na Stripe.
 
